@@ -92,8 +92,8 @@ var metro_colors = [0xe66ac0, 0x8E479B, 0xffc61a, 0xFFA8AF, 0xA1A2A3, 0xF58220,
 0x48B85E, 0xACBFE3, 0x00C1F3, 0x6AC9C8, 0xDA2128, 0x6FC1BA, 0x894E35, 0x0078BF,
 0xB4D445];
 
-var sizex = window.innerWidth;
-var sizey= window.innerHeight;
+var sizex = Math.min(window.innerWidth,window.innerHeight);
+var sizey= Math.min(window.innerHeight,window.innerWidth);
 
 var scene = new THREE.Scene();
 var camera = new THREE.PerspectiveCamera( 75, sizex/ sizey, 0.1, 1000 );
